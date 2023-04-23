@@ -1,0 +1,11 @@
+<p>{{name}}</p>
+<p>{{name}}</p>
+<button [disabled]="isEnabled">isEnabled</button>
+<!-- <div class="app-type-call"></div> -->
+<div app-type-call></div>
+
+<input type='text' (input)="onInputChnaged($event)" />
+<br />
+<input type="text" [(ngModel)]="name" />
+<br />
+<app-create-register-form></app-create-register-form>

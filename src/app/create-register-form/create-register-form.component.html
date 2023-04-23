@@ -1,0 +1,25 @@
+<h1 [hidden]="username==''">Welcome {{username}}</h1>
+<h1 [hidden]="username!=''">please enter your username </h1>
+<hr>
+<label>Username:</label>
+<input type="text" (input)="onUsernameInputChnage($event)">
+<br>
+<label>Enter Password:</label>
+<input type="password" (input)="onPasswordInputChnage($event)">
+<br>
+<label>Enter RePassword:</label>
+<input type="password" (input)="onRePasswordInputChnage($event)">
+<br>
+<label>insert a number</label>
+<input type="number" (input)="onNumberChnage($event)">
+<br>
+<label [hidden]="isPasswordMatch || password==''">Password do not Match</label>
+<label [hidden]="!isPasswordMatch">Password Matched</label>
+
+<p>{{myNumber}}</p>
+
+<button class="btn btn-danger">Add bootstrap</button>
+
+<h3>{{isJqueryWorking}}</h3>
+<h5>this hide with jquery</h5>
+<p [style]="isCorrect ? 'color:red':'color:blue'">Test</p>

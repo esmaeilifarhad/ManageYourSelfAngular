@@ -22,4 +22,37 @@
 
 <h3>{{isJqueryWorking}}</h3>
 <h5>this hide with jquery</h5>
+
+<input type="radio" name="rdbchangeStyle" value="1" (input)="onchangeStyleColor($event)" /> قرمز
+<input type="radio" name="rdbchangeStyle" value="2" (input)="onchangeStyleColor($event)" /> آبی
 <p [style]="isCorrect ? 'color:red':'color:blue'">Test</p>
+<p [style.color]="isCorrect ? 'red':'blue'">Test</p>
+<p [style.color]="isCorrect ? 'red':'blue'" [style.font-size]="isCorrect ? '50px':'30px'">Test</p>
+
+<p [style]="styles">Test</p>
+<p [class]="isCorrect?'class-one' :'class-two'">Test</p>
+
+<p *ngIf="isCorrect">ngIf True</p>
+<p *ngIf="!isCorrect">ngIf False</p>
+
+<p *ngIf="isCorrect;else elsecond">اگر شرط برقرار نبود بخش دیگر اجرا میشود</p>
+<ng-template #elsecond>Else Condition چون شرط برقرا نیست
+    <div>
+        <p>part1</p>
+        <p>part2</p>
+    </div>
+</ng-template>
+
+
+
+<hr>
+<p *ngFor="let user of users;let i=index">{{(i+1)+" - "+user}}</p>
+<hr>
+<hr>
+<button (click)="addNewUser()">Add New User</button>
+<p *ngFor="let user of userObj;let i=index;trackBy:trackByFunc">{{(i+1) + "- "+user.id+" - "+user.name}}</p>
+
+
+<i class="fas fa-star"></i>
+<i style="color:green" class="fas fa-pencil"></i>
+<i style="color:red" class="fas fa-remove"></i>

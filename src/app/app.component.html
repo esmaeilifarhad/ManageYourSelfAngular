@@ -9,3 +9,17 @@
 <input type="text" [(ngModel)]="name" />
 <br />
 <app-create-register-form></app-create-register-form>
+
+<div [ngSwitch]="switchProperty">
+
+    <app-switch-case1 *ngSwitchCase="'a'"></app-switch-case1>
+    <app-switch-case2 *ngSwitchCase="'b'"></app-switch-case2>
+    <app-switch-case3 *ngSwitchCase="'c'"></app-switch-case3>
+</div>
+<!-- <app-star [rating]=3.5></app-star>
+<app-star [rating]=15></app-star>
+<app-star [rating]=5></app-star>
+<app-star [rating]=3></app-star>
+<app-star [rating]=0.7></app-star> -->
+
+<app-star *ngFor="let item of ratings" [rating]=item (starClicked)="onStarClicked($event)"></app-star>

@@ -9,6 +9,10 @@ import { SwitchCase1Component } from './switch-case1/switch-case1.component';
 import { SwitchCase2Component } from './switch-case2/switch-case2.component';
 import { SwitchCase3Component } from './switch-case3/switch-case3.component';
 import { StarComponent } from './star/star.component';
+import { DecouplingComponentComponent } from './decoupling-component/decoupling-component.component';
+import { AdduserComponent } from './adduser/adduser.component';
+import { UsertableComponent } from './usertable/usertable.component';
+import { IncComponent } from './inc/inc.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +22,11 @@ import { StarComponent } from './star/star.component';
     SwitchCase1Component,
     SwitchCase2Component,
     SwitchCase3Component,
-    StarComponent
+    StarComponent,
+    DecouplingComponentComponent,
+    AdduserComponent,
+    UsertableComponent,
+    IncComponent
   ],
   imports: [
     BrowserModule,
